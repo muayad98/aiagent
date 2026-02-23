@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>لوحة القيادة الرئيسية: المساعد الذكي لموظفي الوزارة</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1347ae",
+                        "gold": "#d4af37",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                        "navy-muted": "#1c2436",
+                        "navy-accent": "#29344d"
+                    },
+                    fontFamily: {
+                        "display": ["Noto Sans Arabic", "sans-serif"],
+                        "sans": ["Noto Sans Arabic", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Noto Sans Arabic', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        .icon-sm {
+            font-size: 20px;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f9e29b 100%);
+        }::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 3px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex overflow-hidden selection:bg-gold/30">
+<aside class="w-64 bg-white dark:bg-[#0b0e14] border-l border-slate-200 dark:border-slate-800 flex flex-col h-screen shrink-0 shadow-sm z-20">
+<div class="h-20 flex items-center gap-3 px-6 border-b border-slate-100 dark:border-slate-800/50">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white shrink-0 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined icon-sm">account_balance</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-base font-bold leading-none text-primary dark:text-white">مساعد الوزارة</h1>
+<span class="text-[10px] text-slate-400 font-medium mt-1">سلطنة عمان</span>
+</div>
+</div>
+<nav class="flex-1 px-3 py-6 space-y-1 overflow-y-auto">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/5 text-primary dark:bg-primary/10 dark:text-gold font-bold transition-all group" href="#">
+<span class="material-symbols-outlined icon-sm icon-fill">dashboard</span>
+<span class="text-sm">لوحة القيادة</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-navy-accent/50 transition-all text-slate-600 dark:text-slate-400 group" href="#">
+<span class="material-symbols-outlined icon-sm group-hover:text-primary dark:group-hover:text-gold transition-colors">mail</span>
+<span class="text-sm group-hover:text-slate-900 dark:group-hover:text-slate-200">ملخصات البريد</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-navy-accent/50 transition-all text-slate-600 dark:text-slate-400 group" href="#">
+<span class="material-symbols-outlined icon-sm group-hover:text-primary dark:group-hover:text-gold transition-colors">edit_document</span>
+<span class="text-sm group-hover:text-slate-900 dark:group-hover:text-slate-200">منشئ الخطابات</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-navy-accent/50 transition-all text-slate-600 dark:text-slate-400 group" href="#">
+<span class="material-symbols-outlined icon-sm group-hover:text-primary dark:group-hover:text-gold transition-colors">search_check</span>
+<span class="text-sm group-hover:text-slate-900 dark:group-hover:text-slate-200">البحث الذكي</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-navy-accent/50 transition-all text-slate-600 dark:text-slate-400 group" href="#">
+<span class="material-symbols-outlined icon-sm group-hover:text-primary dark:group-hover:text-gold transition-colors">fact_check</span>
+<span class="text-sm group-hover:text-slate-900 dark:group-hover:text-slate-200">الموافقات المعلقة</span>
+</a>
+<div class="pt-4 mt-2 border-t border-slate-100 dark:border-slate-800/50">
+<p class="px-3 text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">الأدوات</p>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-navy-accent/50 transition-all text-slate-600 dark:text-slate-400 group" href="#">
+<span class="material-symbols-outlined icon-sm group-hover:text-primary dark:group-hover:text-gold transition-colors">analytics</span>
+<span class="text-sm group-hover:text-slate-900 dark:group-hover:text-slate-200">التحليلات</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-navy-accent/50 transition-all text-slate-600 dark:text-slate-400 group" href="#">
+<span class="material-symbols-outlined icon-sm group-hover:text-primary dark:group-hover:text-gold transition-colors">folder_shared</span>
+<span class="text-sm group-hover:text-slate-900 dark:group-hover:text-slate-200">الأرشيف</span>
+</a>
+</div>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0b0e14]">
+<div class="flex items-center gap-3 p-2 rounded-lg hover:bg-white dark:hover:bg-navy-accent transition-colors cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-700">
+<div class="size-9 rounded-full bg-slate-200 dark:bg-navy-accent shrink-0 bg-cover border border-white dark:border-slate-600 shadow-sm" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgAQhzsukvC7ADcaPP9nEmf-kwLCco2ufZkwEZqPcoKlY1jD7N-qdCmad47jvkGjeN3haW6dz5YnBkS-guD-UQX4wwb4u6-sjVDDbSs2MzyCsrLAyI8LZJgpl1R_BtjhoUGVod-WNuV8uAwkzOa2pTFg7yqUdyQYINnLy-rjnuA9az_yeqODdszlQ6ksAGo3iZe2Yb1q9DB_6HQIjY1YR3rWqnZGCJsrqlSyGGHbTAEnJvs7GCZTofAHirLA65e6F_MXemNSlNsQ4')"></div>
+<div class="overflow-hidden min-w-0">
+<p class="text-sm font-bold truncate text-slate-800 dark:text-slate-200">أحمد السعيد</p>
+<p class="text-[10px] text-slate-500 truncate">المكتب التنفيذي</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-lg mr-auto">expand_more</span>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-screen overflow-y-auto bg-slate-50/50 dark:bg-background-dark relative">
+<header class="h-20 border-b border-slate-200/60 dark:border-slate-800 flex items-center justify-between px-8 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-10 w-full">
+<div class="flex items-center gap-6 flex-1 max-w-2xl">
+<div class="relative w-full group">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-slate-100 dark:bg-navy-muted border-none rounded-xl pr-10 pl-4 py-2.5 focus:ring-2 focus:ring-primary/20 focus:bg-white dark:focus:bg-navy-accent transition-all text-sm placeholder:text-slate-400" placeholder="اسأل المساعد الذكي... (مثلاً: ابحث عن تقرير ميزانية الشهر الماضي)" type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-accent text-slate-600 dark:text-slate-400 text-xs font-bold transition-colors">
+<span class="material-symbols-outlined text-lg">language</span>
+<span>العربية</span>
+</button>
+<div class="h-6 w-px bg-slate-200 dark:bg-slate-700 mx-1"></div>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-navy-accent text-slate-500 relative transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 left-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-navy-accent text-slate-500 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<div class="p-6 md:p-10 space-y-8 max-w-[1600px] mx-auto w-full">
+<div class="flex flex-col md:flex-row justify-between items-end gap-4 pb-4 border-b border-slate-200/60 dark:border-slate-800/60">
+<div>
+<h2 class="text-2xl md:text-3xl font-black tracking-tight mb-2 text-slate-900 dark:text-white">صباح الخير، معاليكم</h2>
+<p class="text-slate-500 dark:text-slate-400 flex items-center gap-2 text-base">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+                        الثلاثاء، 24 أكتوبر 2023
+                    </p>
+</div>
+<div class="flex gap-3">
+<button class="bg-primary/10 dark:bg-gold/10 text-primary dark:text-gold px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 border border-primary/20 dark:border-gold/20 hover:bg-primary/20 dark:hover:bg-gold/20 transition-colors">
+<span class="material-symbols-outlined text-lg">visibility_off</span>
+                        وضع الخصوصية
+                    </button>
+<div class="px-4 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-lg text-sm font-bold flex items-center gap-2 border border-emerald-500/20">
+<span class="size-2 bg-emerald-500 rounded-full shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>
+                        النظام آمن
+                    </div>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<section class="bg-white dark:bg-navy-muted rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="border-b border-slate-100 dark:border-slate-800 px-6 py-5 flex items-center gap-3 bg-slate-50/50 dark:bg-white/5">
+<div class="p-1.5 bg-primary/10 dark:bg-gold/20 rounded-lg text-primary dark:text-gold">
+<span class="material-symbols-outlined">smart_toy</span>
+</div>
+<h3 class="text-lg font-bold">نظرة عامة ذكية لليوم</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x md:divide-x-reverse border-slate-100 dark:divide-slate-800">
+<div class="p-6 space-y-5 hover:bg-slate-50/50 dark:hover:bg-white/5 transition-colors">
+<div class="flex justify-between items-center">
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">mail</span>
+                                        ملخصات البريد
+                                    </span>
+<span class="bg-primary/10 text-primary dark:bg-gold/10 dark:text-gold px-2 py-0.5 rounded text-[10px] font-black tracking-tight">AI</span>
+</div>
+<ul class="space-y-4">
+<li class="space-y-1">
+<p class="text-sm font-bold text-slate-800 dark:text-slate-200 truncate">تعديل ميزانية الربع الرابع</p>
+<p class="text-xs text-slate-500 leading-relaxed line-clamp-2">مراجعة عاجلة مطلوبة لتخصيصات وزارة التربية والتعليم للعام القادم.</p>
+</li>
+<li class="space-y-1 pt-2 border-t border-slate-100 dark:border-slate-700/50">
+<p class="text-sm font-bold text-slate-800 dark:text-slate-200 truncate">اجتماع البنك الدولي</p>
+<p class="text-xs text-slate-500 leading-relaxed line-clamp-2">ملخص نقاط الإيجاز لاجتماع الغد الساعة 10 صباحاً مع الوفد الزائر.</p>
+</li>
+</ul>
+<button class="text-primary dark:text-gold text-xs font-bold hover:underline flex items-center gap-1 mt-2">
+                                    عرض الكل <span class="material-symbols-outlined text-sm rotate-180">arrow_right_alt</span>
+</button>
+</div>
+<div class="p-6 space-y-5 hover:bg-slate-50/50 dark:hover:bg-white/5 transition-colors">
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">warning</span>
+                                    المهام الحرجة
+                                </span>
+<ul class="space-y-4">
+<li class="flex gap-3 group cursor-pointer">
+<div class="mt-0.5 rounded-full border border-red-200 bg-red-50 text-red-600 dark:border-red-500/30 dark:bg-red-500/10 dark:text-red-400 size-6 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm">priority_high</span>
+</div>
+<div class="space-y-0.5">
+<p class="text-sm font-bold text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">مرسوم الحوكمة الإلكترونية</p>
+<p class="text-[10px] text-red-500 font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]">schedule</span>
+                                                الموعد خلال ساعتين
+                                            </p>
+</div>
+</li>
+<li class="flex gap-3 group cursor-pointer">
+<div class="mt-0.5 rounded-full border border-orange-200 bg-orange-50 text-orange-600 dark:border-orange-500/30 dark:bg-orange-500/10 dark:text-orange-400 size-6 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm">hourglass_bottom</span>
+</div>
+<div class="space-y-0.5">
+<p class="text-sm font-bold text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">اعتماد كشوف الرواتب</p>
+<p class="text-[10px] text-orange-500 font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]">schedule</span>
+                                                نهاية اليوم
+                                            </p>
+</div>
+</li>
+</ul>
+</div>
+<div class="p-6 space-y-5 bg-slate-50/80 dark:bg-white/[0.02]">
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">gavel</span>
+                                    الموافقات المعلقة
+                                </span>
+<div class="flex flex-col gap-3">
+<div class="p-4 bg-white dark:bg-navy-accent rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded text-slate-600 dark:text-slate-300 font-bold tracking-tight">#MOF-294</span>
+<span class="text-[10px] text-slate-400 font-bold">منذ دقيقتين</span>
+</div>
+<p class="text-sm font-bold mb-4 text-slate-800 dark:text-slate-200">شراء مركبات - الدفعة (ب)</p>
+<div class="flex gap-2">
+<button class="flex-1 py-1.5 bg-primary hover:bg-primary/90 transition-colors text-white text-xs font-bold rounded-lg shadow-sm shadow-primary/30">موافقة سريعة</button>
+<button class="px-2.5 py-1.5 border border-slate-200 dark:border-slate-600 rounded-lg text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<button class="group relative overflow-hidden p-6 bg-gradient-to-br from-primary to-[#0f3a90] dark:from-primary/20 dark:to-primary/10 rounded-2xl border border-primary/20 text-right hover:shadow-lg hover:shadow-primary/10 transition-all flex flex-col justify-between h-40">
+<div class="absolute top-0 left-0 w-32 h-32 bg-white/5 rounded-full blur-2xl -translate-x-10 -translate-y-10"></div>
+<div class="size-10 rounded-lg bg-white/20 dark:bg-primary/40 flex items-center justify-center text-white mb-2 shadow-inner">
+<span class="material-symbols-outlined text-2xl">mail_lock</span>
+</div>
+<div class="relative z-10">
+<h4 class="font-bold text-white text-lg">تلخيص البريد</h4>
+<p class="text-xs text-primary-100 dark:text-primary-200/80 mt-1 leading-snug">احصل على رؤى موجزة للمراسلات الطويلة.</p>
+</div>
+</button>
+<button class="group p-6 bg-white dark:bg-navy-muted rounded-2xl border border-slate-200 dark:border-slate-700 text-right hover:border-primary/50 dark:hover:border-gold/50 hover:shadow-md transition-all flex flex-col justify-between h-40">
+<div class="size-10 rounded-lg bg-slate-100 dark:bg-gold/10 flex items-center justify-center text-primary dark:text-gold mb-2">
+<span class="material-symbols-outlined text-2xl">stylus_note</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 text-lg group-hover:text-primary dark:group-hover:text-gold transition-colors">خطاب رسمي</h4>
+<p class="text-xs text-slate-500 mt-1 leading-snug">إنشاء خطابات رسمية باللغتين بشكل فوري.</p>
+</div>
+</button>
+<button class="group p-6 bg-white dark:bg-navy-muted rounded-2xl border border-slate-200 dark:border-slate-700 text-right hover:border-primary/50 dark:hover:border-gold/50 hover:shadow-md transition-all flex flex-col justify-between h-40">
+<div class="size-10 rounded-lg bg-slate-100 dark:bg-gold/10 flex items-center justify-center text-primary dark:text-gold mb-2">
+<span class="material-symbols-outlined text-2xl">database</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 text-lg group-hover:text-primary dark:group-hover:text-gold transition-colors">البحث في المستندات</h4>
+<p class="text-xs text-slate-500 mt-1 leading-snug">البحث العميق في الأرشيف والبيانات.</p>
+</div>
+</button>
+</section>
+</div>
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<div class="bg-white dark:bg-navy-muted rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-bold text-sm uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">insights</span>
+                                متوقع عبء العمل
+                            </h3>
+<span class="text-[10px] font-bold text-primary bg-primary/5 dark:bg-gold/10 dark:text-gold px-2 py-1 rounded">V2.0</span>
+</div>
+<div class="h-32 flex items-end gap-2 mb-4 px-2">
+<div class="flex-1 bg-slate-100 dark:bg-slate-800 rounded-t-sm h-[40%] hover:bg-slate-200 transition-colors"></div>
+<div class="flex-1 bg-slate-100 dark:bg-slate-800 rounded-t-sm h-[60%] hover:bg-slate-200 transition-colors"></div>
+<div class="flex-1 bg-primary/80 dark:bg-gold/80 rounded-t-sm h-[85%] relative hover:opacity-90 transition-opacity shadow-[0_-4px_10px_rgba(212,175,55,0.2)]">
+<div class="absolute -top-7 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">الذروة</div>
+</div>
+<div class="flex-1 bg-slate-100 dark:bg-slate-800 rounded-t-sm h-[55%] hover:bg-slate-200 transition-colors"></div>
+<div class="flex-1 bg-slate-100 dark:bg-slate-800 rounded-t-sm h-[45%] hover:bg-slate-200 transition-colors"></div>
+<div class="flex-1 bg-slate-100 dark:bg-slate-800 rounded-t-sm h-[30%] hover:bg-slate-200 transition-colors"></div>
+</div>
+<div class="flex justify-between text-[10px] font-bold text-slate-400 px-2">
+<span>الأحد</span><span>الاثنين</span><span class="text-primary dark:text-gold">الثلاثاء</span><span>الأربعاء</span><span>الخميس</span><span>الجمعة</span>
+</div>
+</div>
+<div class="bg-white dark:bg-navy-muted rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+<h3 class="font-bold text-sm uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">event_busy</span>
+                            المواعيد النهائية
+                        </h3>
+<div class="space-y-6 relative before:absolute before:right-[7px] before:top-2 before:bottom-2 before:w-px before:bg-slate-100 dark:before:bg-slate-700/50">
+<div class="relative pr-6 group">
+<div class="absolute right-0 top-1.5 size-3.5 rounded-full bg-red-500 border-[3px] border-white dark:border-navy-muted ring-1 ring-transparent group-hover:ring-red-200 dark:group-hover:ring-red-900 transition-all"></div>
+<p class="text-xs font-bold text-slate-800 dark:text-slate-200 mb-0.5 group-hover:text-primary transition-colors">التقرير المالي السنوي</p>
+<p class="text-[10px] text-slate-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]">schedule</span>
+                                    25 أكتوبر | 09:00 صباحاً
+                                </p>
+</div>
+<div class="relative pr-6 group">
+<div class="absolute right-0 top-1.5 size-3.5 rounded-full bg-gold border-[3px] border-white dark:border-navy-muted ring-1 ring-transparent group-hover:ring-yellow-200 dark:group-hover:ring-yellow-900 transition-all"></div>
+<p class="text-xs font-bold text-slate-800 dark:text-slate-200 mb-0.5 group-hover:text-primary transition-colors">استحقاق سندات الخزانة</p>
+<p class="text-[10px] text-slate-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]">schedule</span>
+                                    28 أكتوبر | 04:00 مساءً
+                                </p>
+</div>
+<div class="relative pr-6 group">
+<div class="absolute right-0 top-1.5 size-3.5 rounded-full bg-slate-300 dark:bg-slate-600 border-[3px] border-white dark:border-navy-muted"></div>
+<p class="text-xs font-bold text-slate-800 dark:text-slate-200 mb-0.5">المراجعة المشتركة</p>
+<p class="text-[10px] text-slate-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]">schedule</span>
+                                    02 نوفمبر | 11:30 صباحاً
+                                </p>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-primary to-[#0f3a90] dark:from-[#0b0e14] dark:to-[#161b26] rounded-2xl border border-primary/20 dark:border-slate-800 p-6 shadow-lg text-white">
+<h3 class="font-bold text-sm uppercase tracking-wider text-white/70 mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">donut_large</span>
+                             حالة الإنجاز
+                        </h3>
+<div class="space-y-5">
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold">
+<span>الامتثال المالي</span>
+<span class="text-gold">84%</span>
+</div>
+<div class="h-1.5 bg-black/20 dark:bg-white/10 rounded-full overflow-hidden">
+<div class="h-full gold-gradient shadow-[0_0_10px_rgba(212,175,55,0.4)]" style="width: 84%;"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold">
+<span>جاهزية التدقيق</span>
+<span class="text-gold">62%</span>
+</div>
+<div class="h-1.5 bg-black/20 dark:bg-white/10 rounded-full overflow-hidden">
+<div class="h-full gold-gradient shadow-[0_0_10px_rgba(212,175,55,0.4)]" style="width: 62%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>
